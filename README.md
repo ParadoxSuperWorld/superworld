@@ -26,7 +26,7 @@ Type your new code into the Minecraft connecter.
 ## Issues!
 If you get a timed out error this can mean one of two things.
 **1. You have too many worlds.**
-**2. The code typed was invalid. If your code is invalid, make sure to check you have Paradox installed, you typed the right code into the ID connecter, you typed the right code into the Minecraft Connecter. 
+**2. The code typed was invalid. If your code is invalid, make sure to check you have Paradox installed, you typed the right code into the ID connecter, you typed the right code into the Minecraft Connecter. **
 ---
 
 **Start building your server with SuperWorld today!**
