@@ -17,23 +17,16 @@ SuperWorld is perfect for:
 
 ## Getting Started
 
-1. **Install SuperWorld**: Ensure Paradox is installed as it is a prerequisite.
-2. **Set Up Your World**: Use the configuration settings to define the type of world and its features.
-3. **Connect Worlds**: Seamlessly link multiple custom worlds to create an expansive and interconnected environment.
-
-## Documentation
-
-For detailed guides and advanced configuration, please refer to the [official documentation](#).
-
-## Contributing
-
-We welcome contributions from the community! To contribute:
-1. Fork this repository.
-2. Create a new branch for your feature or bug fix.
-3. Submit a pull request detailing your changes.
-
-
-
+Check and make sure [Paradox](https://github.com/aliesfndev/ParadoxMC) is installed on your minecraft world/server.
+Install the SuperWorld addon to your world/server.
+Type /function create_flat
+Go to our ID Connecter here!
+Use this command "/function connect".
+Type your new code into the Minecraft connecter.
+## Issues!
+If you get a timed out error this can mean one of two things.
+**1. You have too many worlds.**
+**2. The code typed was invalid. If your code is invalid, make sure to check you have Paradox installed, you typed the right code into the ID connecter, you typed the right code into the Minecraft Connecter. 
 ---
 
 **Start building your server with SuperWorld today!**
