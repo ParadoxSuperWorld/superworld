@@ -1,6 +1,6 @@
 # SuperWorld
 
-**SuperWorld** is a powerful and efficient world connecter powered by **Paradox**! It allows users to create custom worlds seamlessly and supports a variety of world types and game modes.
+**SuperWorld** is a powerful and efficient world connecter powered by **Paradox**! It allows users to create worlds.
 
 ## Features
 
