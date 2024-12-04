@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Island Connecter</title>
+  <style>
+    @font-face {
+      font-family: 'Minecraft';
+      src: url('https://fonts.cdnfonts.com/css/minecraft-4');
+    }
+
+    body {
+      font-family: 'Minecraft', Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background: linear-gradient(-45deg, #2c2c2c, #2a2a2a, #282828, #2e2e2e);
+      background-size: 400% 400%;
+      animation: gradient 15s ease infinite;
+      color: white;
+    }
+
+    @keyframes gradient {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    h1 {
+      font-family: 'Minecraft', Arial, sans-serif;
+      font-size: 36px;
+      color: white;
+    }
+
+    h1 span.joy {
+      color: yellow;
+    }
+
+    h1 span.m {
+      color: lime;
+    }
+
+    h1 span.c {
+      color: green;
+    }
+
+    .container {
+      text-align: center;
+      padding: 20px;
+      background-color: rgba(0, 0, 0, 0.7);
+      border-radius: 10px;
+    }
+
+    input, button {
+      margin: 10px;
+      padding: 10px;
+      font-size: 16px;
+      border-radius: 8px;
+      border: 1px solid #999;
+      background-color: black;
+      color: white;
+      font-family: 'Minecraft', Arial, sans-serif;
+    }
+
+    button:hover {
+      background-color: #333;
+      cursor: pointer;
+    }
+
+    .output {
+      margin-top: 20px;
+      font-size: 18px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1><span class="joy">Paradox </span><span class="m">SuperWorld</span><span class="c"> World ID</span> Connecter!</h1>
+    <p>Enter the provided code below.</p>
+    <form id="converter-form">
+      <input type="number" id="input-number" placeholder="Enter code" required>
+      <button type="submit">Connect</button>
+    </form>
+    <div class="output" id="output"></div>
+  </div>
+
+  <script>
+    const values = { 1: 1, 2: 1000, 3: 10, 4: 100 };
+
+    document.getElementById('converter-form').addEventListener('submit', function(event) {
+      event.preventDefault();
+
+      const inputNumber = parseInt(document.getElementById('input-number').value);
+      const outputDiv = document.getElementById('output');
+      let number = inputNumber;
+      const result = [];
+
+      // Sort keys by the corresponding value
+      const keys = Object.keys(values).sort((a, b) => values[b] - values[a]);
+
+      // Loop over the sorted keys and reduce the number
+      for (const key of keys) {
+        const value = values[key];
+        
+        // If the current number is greater than or equal to the value
+        if (number >= value) {
+          const times = Math.floor(number / value); // Get how many times this value fits in the number
+          for (let i = 0; i < times; i++) {
+            result.push(parseInt(key)); // Push the key (value identifier)
+          }
+          number -= value * times; // Reduce the number by the total value used
+        }
+      }
+
+      // If there's still a remainder, display it as an error
+      if (number !== 0) {
+        outputDiv.innerHTML = `<p>Cannot connect to: ${number}</p>`;
+      } else {
+        outputDiv.innerHTML = `<p>Island Code: ${result.join(", ")}</p>`;
+      }
+    });
+  </script>
+</body>
+</html>
